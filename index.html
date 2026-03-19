@@ -20,7 +20,6 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;overf
 .cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(201,169,110,0.4);border-radius:50%;pointer-events:none;z-index:9998;transition:width .3s,height .3s,opacity .3s;}
 body::before{content:'';position:fixed;inset:0;opacity:.5;pointer-events:none;z-index:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;}
 nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,.96),transparent);z-index:-1;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:.14em;color:var(--white);text-decoration:none;}
@@ -31,7 +30,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .nav-avail{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--muted);}
 .avail-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:glow 2s infinite;}
 @keyframes glow{0%,100%{opacity:1}50%{opacity:.3}}
-
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 60px 100px;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 80% 20%,rgba(201,169,110,.055) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 85%,rgba(201,169,110,.03) 0%,transparent 55%);}
 .vline{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.2) 40%,rgba(201,169,110,.06) 76%,transparent);}
@@ -45,7 +43,7 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .hero-desc{font-size:15px;line-height:1.88;color:rgba(245,240,232,.56);max-width:600px;margin-bottom:52px;opacity:0;animation:fadeUp .9s .85s forwards;}
 .hero-desc strong{color:var(--white);font-weight:400;}
 .hero-actions{display:flex;gap:20px;align-items:center;opacity:0;animation:fadeUp .9s 1.05s forwards;}
-.btn-gold{display:inline-flex;align-items:center;padding:15px 34px;background:var(--gold);color:#080808;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;position:relative;overflow:hidden;transition:color .3s;cursor:pointer;}
+.btn-gold{display:inline-flex;align-items:center;padding:15px 34px;background:var(--gold);color:#080808;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;position:relative;overflow:hidden;transition:color .3s;cursor:pointer;border:none;}
 .btn-gold::before{content:'';position:absolute;inset:0;background:#080808;transform:translateX(-100%);transition:transform .4s cubic-bezier(.65,0,.35,1);}
 .btn-gold:hover::before{transform:translateX(0);}
 .btn-gold:hover{color:var(--gold);}
@@ -56,7 +54,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .hero-scroll span{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;}
 .scroll-line{width:1px;height:52px;background:linear-gradient(to bottom,var(--gold),transparent);animation:spulse 2s infinite;}
 @keyframes spulse{0%,100%{opacity:.3}50%{opacity:1}}
-
 .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);}
 .stat-item{padding:32px 40px;border-right:1px solid var(--border);position:relative;overflow:hidden;}
 .stat-item:last-child{border-right:none;}
@@ -64,12 +61,10 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .stat-item:hover::before{transform:scaleX(1);}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--gold);line-height:1;display:block;}
 .stat-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:7px;line-height:1.55;}
-
 .section{padding:130px 60px;}
 .section+.section{border-top:1px solid var(--border);}
 .sec-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:56px;display:flex;align-items:center;gap:16px;}
 .sec-label::after{content:'';flex:1;max-width:52px;height:1px;background:var(--gold);opacity:.4;}
-
 .about-bg{background:var(--bg2);}
 .about-grid{display:grid;grid-template-columns:340px 1fr;gap:80px;align-items:start;}
 .about-photo-wrap{position:relative;}
@@ -85,7 +80,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .info-block{padding:16px 20px;background:var(--surface);border:1px solid var(--border);}
 .info-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
 .info-val{font-size:13px;color:var(--white);}
-
 .exp-inner{display:grid;grid-template-columns:240px 1fr;gap:80px;align-items:start;}
 .exp-head-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,54px);font-weight:300;line-height:1.05;}
 .exp-head-title em{font-style:italic;color:var(--gold);}
@@ -108,7 +102,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
 .chip{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,.2);padding:4px 11px;}
 .chip-new{background:rgba(201,169,110,.08);border-color:rgba(201,169,110,.4);}
-
 .lead-bg{background:var(--bg2);}
 .lead-title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4.5vw,64px);font-weight:300;line-height:.93;margin-bottom:16px;}
 .lead-title em{font-style:italic;color:var(--gold);}
@@ -122,7 +115,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .event-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
 .event-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;line-height:1.25;margin-bottom:6px;}
 .event-desc{font-size:11px;color:rgba(245,240,232,.55);line-height:1.55;}
-
 .skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:72px;}
 .sk-title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.8vw,50px);font-weight:300;margin-bottom:44px;}
 .sk-title em{font-style:italic;color:var(--gold);}
@@ -139,7 +131,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .soft-item:hover::before{transform:scaleY(1);}
 .soft-name{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .3s;}
 .soft-item:hover .soft-name{color:var(--white);}
-
 .ach-bg{background:var(--bg2);}
 .ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
 .ach-card{padding:40px 32px;background:var(--surface);border:1px solid var(--border);position:relative;overflow:hidden;transition:all .4s cubic-bezier(.23,1,.32,1);}
@@ -149,7 +140,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .ach-num{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:10px;}
 .ach-title{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;}
 .ach-body{font-size:12px;line-height:1.75;color:rgba(245,240,232,.45);}
-
 .proj-list{display:flex;flex-direction:column;gap:2px;}
 .proj-item{display:grid;grid-template-columns:64px 1fr auto;gap:32px;align-items:center;padding:28px 36px;background:var(--surface);border:1px solid var(--border);transition:all .4s cubic-bezier(.23,1,.32,1);position:relative;overflow:hidden;}
 .proj-item::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,169,110,.04),transparent 60%);opacity:0;transition:opacity .4s;}
@@ -162,7 +152,6 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .proj-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
 .proj-arrow{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--muted);transition:all .3s;flex-shrink:0;}
 .proj-item:hover .proj-arrow{border-color:var(--gold);color:var(--gold);background:var(--gold-d);}
-
 .contact-bg{background:var(--surface);border-top:1px solid var(--border);}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:90px;}
 .contact-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,80px);font-weight:300;line-height:.93;letter-spacing:-.02em;}
@@ -179,17 +168,14 @@ nav::after{content:'';position:absolute;inset:0;background:linear-gradient(to bo
 .fgroup input:focus,.fgroup textarea:focus,.fgroup select:focus{border-color:rgba(201,169,110,.42);}
 .fgroup textarea{height:100px;}
 .fgroup select option{background:#111;}
-
 footer{padding:28px 60px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
 footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);letter-spacing:.12em;}
 .foot-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--white);}
 .foot-logo span{color:var(--gold);}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .reveal{opacity:0;transform:translateY(34px);transition:opacity .88s cubic-bezier(.23,1,.32,1),transform .88s cubic-bezier(.23,1,.32,1);}
 .reveal.visible{opacity:1;transform:none;}
-
 @media(max-width:960px){
   nav{padding:20px 24px;} .nav-avail{display:none;} .nav-links{gap:18px;}
   .hero{padding:140px 24px 80px;}
@@ -204,7 +190,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
 </style>
 </head>
 <body>
-
 <div class="cursor" id="cur"></div>
 <div class="cursor-ring" id="ring"></div>
 
@@ -280,7 +265,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
       <p class="exp-head-sub">Every role I take on, I own completely — delivering results that speak for themselves.</p>
     </div>
     <div class="timeline reveal">
-
       <div class="tl-item">
         <div class="tl-dot new"></div>
         <div class="tl-header">
@@ -296,7 +280,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
         </div>
         <div class="chips"><span class="chip chip-new">Editorial Leadership</span><span class="chip chip-new">Content Strategy</span><span class="chip chip-new">Writer Management</span><span class="chip chip-new">Academic Journalism</span></div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-header">
@@ -306,7 +289,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
         <div class="tl-body">Micro1 builds the next generation of intelligent robotics systems. I produce <strong>specification-compliant AI training videos</strong> that feed directly into machine learning pipelines — my content teaches robots how to perceive and act in the world. Delivered <strong>45+ high-quality assets on schedule</strong>, operating independently within a fully remote international team.</div>
         <div class="chips"><span class="chip">AI Training</span><span class="chip">Robotics ML</span><span class="chip">Remote</span><span class="chip">45+ Assets</span></div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-header">
@@ -316,7 +298,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
         <div class="tl-body"><strong>Elected by peers</strong> — not appointed — to serve as Deputy President. I act as the primary liaison between students and administration, managing escalations and proposals with professionalism. I spearhead university-wide events, lead cross-functional teams, and mentor council members.</div>
         <div class="chips"><span class="chip">Elected Leader</span><span class="chip">Event Planning</span><span class="chip">Mentorship</span><span class="chip">Admin Liaison</span></div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-header">
@@ -326,7 +307,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
         <div class="tl-body">Designed, built, and deployed <strong>2 fully responsive websites from scratch</strong> using HTML and CSS — hosted live on GitHub. Each project managed end-to-end from concept to deployment. Demonstrates a <strong>self-directed mindset</strong> and the ability to take ideas from zero to a polished, live product independently.</div>
         <div class="chips"><span class="chip">HTML & CSS</span><span class="chip">GitHub</span><span class="chip">Responsive Design</span><span class="chip">Self-Directed</span></div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-header">
@@ -336,7 +316,6 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
         <div class="tl-body">Organised <strong>full-cycle logistics for educational events</strong> serving hundreds of students. Coordinated volunteers, educators, and administrators simultaneously — leading multiple stakeholders under pressure with every programme delivered on time, without disruption.</div>
         <div class="chips"><span class="chip">Event Logistics</span><span class="chip">Team Coordination</span><span class="chip">100s of Students</span></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -459,11 +438,22 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
       </div>
     </div>
     <div class="reveal">
-      <div class="fgroup"><label>Your Name</label><input type="text" placeholder="Full name"></div>
-      <div class="fgroup"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-      <div class="fgroup"><label>Opportunity Type</label><select><option value="" disabled selected>Select...</option><option>Internship</option><option>Full-time Role</option><option>Freelance / Project</option><option>Collaboration</option><option>Other</option></select></div>
-      <div class="fgroup"><label>Message</label><textarea placeholder="Tell me about the opportunity..."></textarea></div>
-      <a onclick="sendForm()" class="btn-gold" style="cursor:pointer;"><span>Send Message →</span></a>
+      <form id="contactForm" name="contactForm">
+        <div class="fgroup"><label>Your Name</label><input type="text" name="Name" placeholder="Full name" required></div>
+        <div class="fgroup"><label>Email</label><input type="email" name="Email" placeholder="your@email.com" required></div>
+        <div class="fgroup"><label>Opportunity Type</label>
+          <select name="Type" required>
+            <option value="" disabled selected>Select...</option>
+            <option>Internship</option>
+            <option>Full-time Role</option>
+            <option>Freelance / Project</option>
+            <option>Collaboration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fgroup"><label>Message</label><textarea name="Message" placeholder="Tell me about the opportunity..." required></textarea></div>
+        <button type="submit" class="btn-gold" id="submitBtn"><span>Send Message →</span></button>
+      </form>
     </div>
   </div>
 </section>
@@ -475,27 +465,31 @@ footer p{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);lett
 </footer>
 
 <script>
-async function sendForm() {
-  const url = "https://script.google.com/macros/s/AKfycbxzXeeBLn10H1qvv1ItBKRUbP4aSIlTqieJXzN8meWjl9kZDukzqOtGyVgWJGyS7rFblA/exec";
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyXCCFJ5U-Dko-brZh29EufpDdBU__YJqMJYWSzvYYzUyFhRREGYEVcNKmIx1VXAml7/exec';
+const form = document.forms['contactForm'];
+const btn = document.getElementById('submitBtn');
 
-  const formData = new FormData();
-  formData.append("name", document.querySelector('input[type="text"]').value);
-  formData.append("email", document.querySelector('input[type="email"]').value);
-  formData.append("type", document.querySelector('select').value);
-  formData.append("message", document.querySelector('textarea').value);
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '<span>Sending...</span>';
+  btn.style.opacity = '0.7';
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(() => {
+      btn.innerHTML = '<span>Message Sent ✓</span>';
+      btn.style.background = '#2a6b4a';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => { btn.innerHTML = originalText; btn.style.background = ''; }, 3000);
+    })
+    .catch(() => {
+      btn.innerHTML = '<span>Error! Try again.</span>';
+      btn.style.background = '#8b0000';
+      btn.style.opacity = '1';
+      setTimeout(() => { btn.innerHTML = originalText; btn.style.background = ''; }, 3000);
+    });
+});
 
-  await fetch(url, { method: "POST", body: formData, mode: "no-cors" });
-
-  document.querySelector('input[type="text"]').value = '';
-  document.querySelector('input[type="email"]').value = '';
-  document.querySelector('select').value = '';
-  document.querySelector('textarea').value = '';
-
-  const btn = document.querySelector('a.btn-gold[onclick]');
-  btn.innerHTML = '<span>Message Sent ✓</span>';
-  btn.style.background = '#2a6b4a';
-  setTimeout(() => { btn.innerHTML = '<span>Send Message →</span>'; btn.style.background = ''; }, 3000);
-}
 const cur=document.getElementById('cur'),ring=document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx-4+'px';cur.style.top=my-4+'px';});
